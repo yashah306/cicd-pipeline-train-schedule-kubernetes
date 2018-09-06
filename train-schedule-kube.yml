@@ -34,13 +34,5 @@ spec:
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
         - containerPort: 8080
-  ---        
-  kind: ClusterRole
-  apiVersion: rbac.authorization.k8s.io/v1
-  metadata:
-    namespace: default
-    name: train-schedule
-  rules:
-  - apiGroups: [""] # "" indicates the core API group
-    resources: ["services"]
-    verbs: ["get", "watch", "list"]
+   
+ 
