@@ -48,7 +48,7 @@ pipeline {
                 //implement Kubernetes deployment here
                 kubernetesDeploy(
                   kubeconfigId: 'Kubeconfig',
-                  configs: 'guestbook-controller.json',
+                  configs: 'train-schedule-kube.yml',
                   enableConfigSubstitution: true
                   )
             }
