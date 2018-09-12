@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: train-schedule-service
-  spec:
+spec:
   type: LoadBalancer
   selector:
     app: train-schedule
