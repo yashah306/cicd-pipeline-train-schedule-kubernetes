@@ -10,7 +10,7 @@ spec:
   ports:
   - protocol: TCP
     port: 3001
-    targetPort: 30231
+    nodePort: 30231
 
 ---
 
