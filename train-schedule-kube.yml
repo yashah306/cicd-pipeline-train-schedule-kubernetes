@@ -35,4 +35,15 @@ spec:
         ports:
         - containerPort: 8080
         
+---
+
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: train-schedule-service
+subsets:
+  - addresses:
+      - ip: 192.168.233.15
+    ports:
+      - port: 8080
  
