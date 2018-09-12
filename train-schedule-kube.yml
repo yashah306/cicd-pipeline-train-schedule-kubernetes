@@ -4,7 +4,7 @@ metadata:
   name: train-schedule-service
 spec:
   type: LoadBalancer
-  externalIPs: "ac19d6254b1ff11e88f5712eac6c1e0d-1054510617.us-east-1.elb.amazonaws.com"
+  loadBalancerIP: "ac19d6254b1ff11e88f5712eac6c1e0d-1054510617.us-east-1.elb.amazonaws.com"
   selector:
     app: train-schedule
   ports:
