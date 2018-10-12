@@ -1,10 +1,6 @@
 pipeline {
     agent any
-    sendSplunkConsoleLog {
-        node{
-        sh "echo testjob";
-        }
-}
+    
     environment {
         
         DOCKER_IMAGE_NAME = "yashah1/train-schedule"
