@@ -1,5 +1,5 @@
 pipeline {
-     
+    
     environment {
         
         DOCKER_IMAGE_NAME = "yashah1/train-schedule"
@@ -37,6 +37,11 @@ pipeline {
                     }
                 }
             }
+        sendSplunkConsoleLog {
+          node{
+          sh "echo testjob";
+          }
+          } 
         }
         
 }
