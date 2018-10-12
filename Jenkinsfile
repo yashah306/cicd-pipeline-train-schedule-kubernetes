@@ -1,11 +1,6 @@
 pipeline {
     
-   agent any
-   options {
-       timeout(time: 1, unit: 'MINUTES')
-       sendSplunkConsoleLog()
-   }
-    
+  
     environment {
         
         DOCKER_IMAGE_NAME = "yashah1/train-schedule"
