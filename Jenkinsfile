@@ -1,5 +1,16 @@
 pipeline {
     agent any
+options {
+timeout(time: 1, unit: 'HOURS')
+sendSplunkConsoleLog()
+}
+stages {
+stage('Example') {
+steps {
+echo 'Hello World'
+}
+}
+}
     
     environment {
         
