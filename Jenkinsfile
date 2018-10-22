@@ -1,9 +1,5 @@
 pipeline {
 
-    agent any 
-    options {
-            sendSplunkConsoleLog()
-    }
     
     environment {
         
@@ -46,7 +42,10 @@ pipeline {
 
         }
     }
-     
+ agent any 
+    options {
+            sendSplunkConsoleLog()
+    }    
 }
         
 
