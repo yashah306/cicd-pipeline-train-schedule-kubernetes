@@ -41,7 +41,7 @@ pipeline {
 
         }
     }
-    sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+    sendSplunkConsoleLog() 
 }
         
 
