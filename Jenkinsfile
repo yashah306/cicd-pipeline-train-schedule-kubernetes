@@ -1,8 +1,4 @@
- sendSplunkConsoleLog {
-    node{
-    sh "echo testjob";
- }
-}
+ 
 
 pipeline {
     
