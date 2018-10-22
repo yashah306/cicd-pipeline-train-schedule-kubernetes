@@ -37,11 +37,8 @@ pipeline {
                     }
                 }
             }
-        sendSplunkConsoleLog {
-          node{
-          sh "echo testjob";
-          }
-          } 
+        sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+
         }
         
 }
