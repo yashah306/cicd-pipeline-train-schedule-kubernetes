@@ -1,5 +1,5 @@
 pipeline {
-    sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+    
     environment {
         
         DOCKER_IMAGE_NAME = "yashah1/train-schedule"
@@ -41,6 +41,7 @@ pipeline {
 
         }
     }
+    sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
 }
         
 
