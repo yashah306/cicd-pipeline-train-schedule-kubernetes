@@ -1,6 +1,16 @@
-pipeline {
+ sendSplunkConsoleLog {
+    node{
+    sh "echo testjob";
+ }
+}
 
+pipeline {
     
+   agent any
+    options {
+        timeout(time: 1, unit: 'HOURS')
+        sendSplunkConsoleLog()
+    }
     environment {
         
         DOCKER_IMAGE_NAME = "yashah1/train-schedule"
@@ -42,10 +52,6 @@ pipeline {
 
         }
     }
- agent any 
-    options {
-            sendSplunkConsoleLog()
-    }    
 }
         
 
