@@ -1,7 +1,8 @@
  
 
 pipeline {
-    
+   sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+   
    agent any
     options {
         timeout(time: 1, unit: 'HOURS')
@@ -28,7 +29,7 @@ pipeline {
                     app = docker.build(DOCKER_IMAGE_NAME)
                     app.inside {
                         sh 'echo Hello, World!'
-                        sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+                        
                     }
                 }
             }
