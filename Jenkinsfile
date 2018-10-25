@@ -13,9 +13,10 @@ pipeline {
     }
     stages {
         stage('Build') {
-            sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
 
             steps {
+                sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
