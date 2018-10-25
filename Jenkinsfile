@@ -1,7 +1,6 @@
  
 
 pipeline {
-   sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
    
    agent any
     options {
@@ -14,6 +13,8 @@ pipeline {
     }
     stages {
         stage('Build') {
+            sendSplunkFile excludes: '', includes: '*.log', publishFromSlave: true, sizeLimit: '100MB'
+
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
